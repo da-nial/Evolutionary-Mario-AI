@@ -114,6 +114,6 @@ A slightly modified version of the game2dboard library will be used in this proj
 
 - **Course**: Artificial Intelligence
 - **University**: Amirkabir University of Technology
-- **Semester**: Fall 2021
+- **Semester**: Spring 2021
 
 Let me know if you have any questions.
