@@ -1,4 +1,4 @@
-## Super Mario Agents with Genetics Algorithms
+## Super Mario Agents with Genetic Algorithms
 
 This project implements evolutionary algorithms from scratch to create an intelligent AI agent for a simplified version
 of the Super Mario game. The complete description of the project can be found in the [docs](./docs) folder in Persian.
@@ -55,6 +55,42 @@ A generic class named `GeneticSolver` is defined to implement these five
 steps ([genetic_solver.py](src/genetic_solver.py)). All steps, such as reproduction and
 mutation, are pluggable. Therefore, you can pass your own custom function for reproduction or other steps to this class.
 As another example, you can pass in the arguments for population size and mutation probability.
+
+### Run
+
+```  python main.py ```
+
+Example output:
+
+```
++--------------------------------+---------------------------+
+| Attribute                      | Value                     |
++================================+===========================+
+| Fitness Function               | fitness_fn_with_winning   |
++--------------------------------+---------------------------+
+| Selection Function             | half_select               |
++--------------------------------+---------------------------+
+| Reproduction Function          | single_point_crossover    |
++--------------------------------+---------------------------+
+| Mutation Function              | unbiased_mutate           |
++--------------------------------+---------------------------+
+| Mutation Probability           | 0.1                       |
++--------------------------------+---------------------------+
+| Num Generations                | 500                       |
++--------------------------------+---------------------------+
+| Convergence Epsilon            | 1e-06                     |
++--------------------------------+---------------------------+
+| Mutation Aggression            | 0.5                       |
++--------------------------------+---------------------------+
+| Convergence                    | False                     |
++--------------------------------+---------------------------+
+| First Generation with Solution | 0                         |
++--------------------------------+---------------------------+
+| Solution                       | 0010102002221221221001022 |
++--------------------------------+---------------------------+
+
+plotted results of level 6 successfully!
+```
 
 ### Results
 
