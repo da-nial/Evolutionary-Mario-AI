@@ -3,7 +3,11 @@ from os.path import join
 from fitness import fitness_fn_with_winning, fitness_fn_without_winning
 from game import Game
 from genetic_solver import GeneticSolver
-from helper import load_levels, weighted_select, half_select, single_point_crossover, two_point_crossover, unbiased_mutate
+from helper import (
+    load_levels, weighted_select, half_select,
+    single_point_crossover, two_point_crossover, unbiased_mutate,
+    print_table
+)
 from stats import plot
 
 
@@ -48,7 +52,22 @@ def main():
         plot_text += f"First Generation with Solution: {first_generation_with_solution}\n"
         plot_text += f"Solution: {solution}"
 
-        print(plot_text)
+        run_history = {
+            'Fitness Function': solver.fitness_fn.__name__,
+            'Selection Function': solver.selection_fn.__name__,
+            "Reproduction Function": solver.reproduction_fn.__name__,
+            "Mutation Function": solver.mutation_fn.__name__,
+            "Mutation Probability": solver.mutation_probability,
+            "Num Generations": solver.num_generations,
+            "Convergence Epsilon": solver.convergence_epsilon,
+            "Mutation Aggression": solver.mutation_aggression,
+            'Convergence': did_converge,
+            'First Generation with Solution': first_generation_with_solution,
+            'Solution': solution
+        }
+
+        print_table(run_history)
+
         plot(stats, plot_text, join(output_dir, "level" + str(level_idx) + ".png"))
         print(f"plotted results of level {level_idx} successfully!\n\n")
 

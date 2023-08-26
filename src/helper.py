@@ -1,7 +1,15 @@
 from os.path import join
 from random import randint, choice, choices
 
+from tabulate import tabulate
+
 from chromo import Chromo
+
+
+def print_table(data_dict):
+    table_data = [(key, value) for key, value in data_dict.items()]
+    table = tabulate(table_data, headers=["Attribute", "Value"], tablefmt="grid")
+    print(table)
 
 
 def read_from_file(path):
