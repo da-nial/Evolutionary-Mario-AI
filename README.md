@@ -1,6 +1,6 @@
 ## Super Mario Agents with Genetic Algorithms
 
-This project implements evolutionary algorithms from scratch to create an intelligent AI agent for a simplified version
+This project implements evolutionary algorithms from scratch to create an intelligent agent for a simplified version
 of the Super Mario game. The complete description of the project can be found in the [docs](./docs) folder in Persian.
 
 ### The Problem
